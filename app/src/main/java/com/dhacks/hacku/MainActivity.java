@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
 
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
 
         al = new ArrayList<>();
