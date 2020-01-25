@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Watson Assistant service credentials -->
+    <string name="assistant_id"></string>
+
+    <!-- Watson Assistant API Key -->
+    <string name="assistant_apikey"></string>
+
+    <!-- Watson Assistant Region/Location URL-->
+    <string name="assistant_url"></string>
+</resources>
