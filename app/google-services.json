@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "100047417866",
+    "firebase_url": "https://hacku-cfe3a.firebaseio.com",
+    "project_id": "hacku-cfe3a",
+    "storage_bucket": "hacku-cfe3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100047417866:android:6b17982abb928ed479e5f3",
+        "android_client_info": {
+          "package_name": "com.dhacks.hacku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "100047417866-us57mb091mu5f0p7ndeal89864askmar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3B5Qq4h__aTCXKbIor1DcLahyCDjrsOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100047417866-us57mb091mu5f0p7ndeal89864askmar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
