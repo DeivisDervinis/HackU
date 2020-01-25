@@ -1,6 +1,7 @@
 package com.dhacks.hacku;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
 
         al = new ArrayList<>();
         al.add("php");

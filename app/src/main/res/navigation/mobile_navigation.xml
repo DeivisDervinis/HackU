@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/fragment_login">
+    app:startDestination="@id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -22,16 +22,4 @@
         android:name="com.dhacks.hacku.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-    <fragment
-        android:id="@+id/fragment_login"
-        android:name="com.dhacks.hacku.fragment_login"
-        android:label="fragment_fragment_login"
-        tools:layout="@layout/fragment_fragment_login" >
-        <action
-            android:id="@+id/action_fragment_login_to_navigation_home"
-            app:destination="@id/navigation_home"
-            app:enterAnim="@animator/lb_guidedstep_slide_down"
-            app:exitAnim="@animator/lb_guidedstep_slide_up"
-            app:popUpTo="@+id/navigation_home" />
-    </fragment>
 </navigation>
