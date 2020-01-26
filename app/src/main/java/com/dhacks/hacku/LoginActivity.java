@@ -57,26 +57,6 @@ public class LoginActivity extends AppCompatActivity {
         loginPasswordEditText = findViewById(R.id.login_password_edit_text);
         btnHackuLogin = findViewById(R.id.btn_hacku_login);
 
-        loginEmailEditText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (!isEmailValid(loginEmailEditText.getText())) {
-                    loginEmailTextInput.setError("Email is invalid!");
-                }
-                return false;
-            }
-        });
-
-        loginPasswordEditText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (!isPasswordValid(loginPasswordEditText.getText())) {
-                    loginPasswordTextInput.setError("Password is either empty or less than 8 characters!");
-                }
-                return false;
-            }
-        });
-
         btnHackuLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

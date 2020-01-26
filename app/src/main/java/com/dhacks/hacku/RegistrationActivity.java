@@ -55,25 +55,6 @@ public class RegistrationActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password_edit_text);
         btnCreateAcct = findViewById(R.id.btn_create_acct);
 
-        emailEditText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (!isEmailValid(emailEditText.getText())) {
-                    emailTextInput.setError("Email is invalid!");
-                }
-                return false;
-            }
-        });
-
-        passwordEditText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (!isPasswordValid(passwordEditText.getText())) {
-                    passwordTextInput.setError("Password must be");
-                }
-                return false;
-            }
-        });
 
         btnCreateAcct.setOnClickListener(new View.OnClickListener() {
             @Override
