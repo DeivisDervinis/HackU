@@ -19,9 +19,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".RegistrationLoginActivity">
+        <activity android:name=".LoginActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".RegistrationActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".RegistrationLoginActivity" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

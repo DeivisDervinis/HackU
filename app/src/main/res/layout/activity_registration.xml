@@ -5,14 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegistrationActivity">
+    tools:context=".RegistrationActivity"
+    android:background="#423e69"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_launcher"
+        />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hacku_registration_header_text"
-        android:textSize="30sp"
+        android:textSize="36sp"
+        android:textColor="#FFFFFF"
         android:textAlignment="center"
-        android:layout_marginTop="100dp"
         android:layout_marginBottom="50dp"/>
 
     <!-- Email Registration Box-->
@@ -23,12 +32,15 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="25dp"
+        android:textColorHint="#FFFFFF"
         android:hint="@string/registration_email_hint">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
             android:maxLines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,12 +52,15 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="10dp"
+        android:textColorHint="#FFFFFF"
         android:hint="@string/registration_password_hint">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
             android:maxLines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
     <Button

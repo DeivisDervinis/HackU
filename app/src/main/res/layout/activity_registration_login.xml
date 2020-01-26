@@ -5,24 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegistrationLoginActivity">
+    android:background="#423e69"
+    tools:context=".RegistrationLoginActivity"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_launcher"
+        />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:textSize="30sp"
-        android:layout_marginTop="100dp"
+        android:textSize="48sp"
+        android:textColor="#FFFFFF"
         android:layout_marginBottom="50dp"/>
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_register_acct_label"
-        android:textSize="14sp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="25dp"/>
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
@@ -30,5 +31,16 @@
         android:text="@string/login_btn_label"
         android:textSize="14sp"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"/>
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="15dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_register_acct_label"
+        android:textSize="14sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp" />
 </LinearLayout>

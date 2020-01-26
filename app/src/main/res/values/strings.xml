@@ -9,6 +9,6 @@
     <string name="login_password_hint">Password</string>
     <string name="login_btn_label">Login</string>
     <string name="btn_register_acct_label">Register</string>
-    <string name="hacku_login_header_text">HackU Login</string>
-    <string name="hacku_registration_header_text">HackU Registration</string>
+    <string name="hacku_login_header_text">Login</string>
+    <string name="hacku_registration_header_text">Registration</string>
 </resources>
