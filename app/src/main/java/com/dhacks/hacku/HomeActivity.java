@@ -24,14 +24,11 @@ public class HomeActivity extends AppCompatActivity {
 
 
         al = new ArrayList<>();
-        al.add("php");
-        al.add("c");
-        al.add("python");
-        al.add("java");
-        al.add("html");
-        al.add("c++");
-        al.add("css");
-        al.add("javascript");
+        al.add("Creative");
+        al.add("Passionate");
+        al.add("Spontaneous");
+        al.add("Agreeable");
+        al.add("Team Player");
 
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al );
         SwipeFlingAdapterView flingContainer = findViewById(R.id.frame);
@@ -59,9 +56,9 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
                 // Ask for more data here
-                al.add("XML ".concat(String.valueOf(i)));
-                arrayAdapter.notifyDataSetChanged();
-                i++;
+//                al.add("XML ".concat(String.valueOf(i)));
+//                arrayAdapter.notifyDataSetChanged();
+//                i++;
             }
 
             @Override
