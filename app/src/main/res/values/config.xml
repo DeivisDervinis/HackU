@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Watson Assistant service credentials -->
-    <string name="assistant_id"></string>
+    <string name="assistant_id">6cbc0845-c2b7-47d4-b8c4-3dacfc3dbf66</string>
 
     <!-- Watson Assistant API Key -->
-    <string name="assistant_apikey"></string>
+    <string name="assistant_apikey">QvYUrDbI9QXKlXC4GuBzXJCPeAkMJniy51ULrsIapcmO</string>
 
     <!-- Watson Assistant Region/Location URL-->
-    <string name="assistant_url"></string>
+    <string name="assistant_url">https://api.us-south.assistant.watson.cloud.ibm.com/instances/9ecc70ac-4b3e-4277-9bd2-190eee784f6b</string>
 </resources>
