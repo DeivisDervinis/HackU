@@ -1,14 +1,22 @@
 package com.dhacks.hacku;
 
 import android.content.Intent;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import javax.annotation.Nullable;
 
@@ -21,12 +29,18 @@ public class RegistrationActivity extends AppCompatActivity {
     private TextInputLayout passwordTextInput;
     private TextInputEditText passwordEditText;
     private Button btnCreateAcct;
+
+    private FirebaseAuth mAuth;
+    private String email;
+    private String password;
     //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        mAuth = FirebaseAuth.getInstance();
 
         setupViews();
     }
@@ -74,10 +88,24 @@ public class RegistrationActivity extends AppCompatActivity {
                     emailTextInput.setError(null);
                     passwordTextInput.setError(null);
 
-                    //TODO: ADD REGISTRATION LOGIC HERE
+                    email = emailEditText.getText().toString();
+                    password = passwordEditText.getText().toString();
 
-                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                    startActivity(intent);
+                    mAuth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), "Registration successful!", Toast.LENGTH_LONG).show();
+
+                                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                        startActivity(intent);
+                                    }
+                                    else {
+                                        Toast.makeText(getApplicationContext(), "Registration failed! Please try again later", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
                 }
             }
         });
