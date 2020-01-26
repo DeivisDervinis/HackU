@@ -1,6 +1,5 @@
 package com.dhacks.hacku.ui.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.dhacks.hacku.LoginActivity;
-import com.dhacks.hacku.MainActivity;
 import com.dhacks.hacku.R;
 
 public class HomeFragment extends Fragment {
