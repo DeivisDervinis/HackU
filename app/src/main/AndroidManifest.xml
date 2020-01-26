@@ -31,6 +31,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
+            android:label="HackU Assistant"
             android:screenOrientation="portrait">
         </activity>
         <activity

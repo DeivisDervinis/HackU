@@ -278,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
                                     messageArrayList.add(outMessage);
 
                                     // speak the message
-                                    new SayTask().execute(outMessage.getMessage());
+                                    //new SayTask().execute(outMessage.getMessage());
                                     break;
 
                                 case "option":
