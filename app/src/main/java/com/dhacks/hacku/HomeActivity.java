@@ -1,15 +1,10 @@
 package com.dhacks.hacku;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
-
-import com.lorentzos.flingswipe.SwipeFlingAdapterView;
-
-import java.util.ArrayList;
 
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
 

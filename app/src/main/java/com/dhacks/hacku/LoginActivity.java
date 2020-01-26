@@ -1,14 +1,23 @@
 package com.dhacks.hacku;
 
 import android.content.Intent;
-import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import javax.annotation.Nullable;
 
@@ -20,6 +29,11 @@ public class LoginActivity extends AppCompatActivity {
     private TextInputLayout loginPasswordTextInput;
     private TextInputEditText loginPasswordEditText;
     private Button btnHackuLogin;
+
+    private FirebaseAuth mAuth;
+
+    private String email;
+    private String password;
     //endregion
 
     @Override
@@ -27,7 +41,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        mAuth = FirebaseAuth.getInstance();
+
         setupViews();
+
     }
 
     /**
@@ -37,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         loginEmailTextInput = findViewById(R.id.login_email_text_input);
         loginEmailEditText = findViewById(R.id.login_email_edit_text);
         loginPasswordTextInput = findViewById(R.id.login_password_text_input);
-        loginPasswordEditText = findViewById(R.id.login_email_edit_text);
+        loginPasswordEditText = findViewById(R.id.login_password_edit_text);
         btnHackuLogin = findViewById(R.id.btn_hacku_login);
 
         loginEmailEditText.setOnKeyListener(new View.OnKeyListener() {
@@ -75,9 +92,28 @@ public class LoginActivity extends AppCompatActivity {
 
                     //TODO: ADD LOGIN LOGIC HERE
 
+                    email = loginEmailEditText.getText().toString();
+                    password = loginPasswordEditText.getText().toString();
+
+                    mAuth.signInWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
+
+                                        Intent newIntent = new Intent(getApplicationContext(), MainActivity.class);
+                                        startActivity(newIntent);
+                                    }
+                                    else {
+                                        Toast.makeText(getApplicationContext(), "Login failed! Please try again later", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+
                     //TODO: DOUBLE CHECK THE LOGICAL FLOW HERE
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                    startActivity(intent);
                 }
             }
         });
