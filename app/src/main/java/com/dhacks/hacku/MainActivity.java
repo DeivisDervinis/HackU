@@ -2,6 +2,7 @@ package com.dhacks.hacku;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
@@ -219,8 +220,13 @@ public class MainActivity extends AppCompatActivity {
 
     // Sending a message to Watson Assistant Service
     private void sendMessage() {
-
                         final String inputmessage = this.inputMessage.getText().toString().trim();
+
+                        if(inputmessage.equals("Next Tab")){
+                            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                            startActivity(intent);
+                        }
+
                         if (!this.initialRequest) {
                             Message inputMessage = new Message();
                             inputMessage.setMessage(inputmessage);

@@ -2,17 +2,17 @@ apply plugin: 'com.android.application'
 
 repositories {
     maven {
-        url  "https://dl.bintray.com/ibm-cloud-sdks/ibm-cloud-sdk-repo"
+        url "https://dl.bintray.com/ibm-cloud-sdks/ibm-cloud-sdk-repo"
     }
 }
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 28
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.dhacks.hacku"
-        minSdkVersion 21
-        targetSdkVersion 26
+        minSdkVersion 19
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -38,18 +38,31 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:recyclerview-v7:26.1.0'
-    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
     implementation 'com.ibm.watson:assistant:8.1.0'
     implementation 'com.ibm.watson:text-to-speech:8.1.0'
     implementation 'com.ibm.watson:speech-to-text:8.1.0'
     implementation 'com.ibm.watson.developer_cloud:android-sdk:0.5.0'
     implementation 'com.android.support:multidex:1.0.1'
 
-    implementation ('com.github.bumptech.glide:glide:4.9.0') {
+    implementation('com.github.bumptech.glide:glide:4.9.0') {
         exclude group: "com.android.support"
     }
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
+    implementation 'com.android.support:support-annotations:25.1.1'
+    implementation 'com.android.support:support-v13:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:gridlayout-v7:28.0.0'
+    implementation 'com.android.support:leanback-v17:28.0.0'
+    implementation 'com.android.support:mediarouter-v7:28.0.0'
+    implementation 'com.android.support:palette-v7:28.0.0'
+
+    implementation 'com.lorentzos.swipecards:library:1.0.9@aar'
 }
