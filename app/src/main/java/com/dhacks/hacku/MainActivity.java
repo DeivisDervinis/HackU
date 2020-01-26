@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
     private void sendMessage() {
         final String inputmessage = this.inputMessage.getText().toString().trim();
 
-        if (inputmessage.equals("Next Tab")) {
+        if (inputmessage.toLowerCase().equals("interest profile")) {
             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
             startActivity(intent);
         }
