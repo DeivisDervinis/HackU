@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">Hack U</string>
+    <string name="app_name">HackU</string>
     <string name="what_s_on_your_mind">Enter your query</string>
     <string name="menu_refresh">Refresh</string>
+    <string name="registration_email_hint">Email</string>
+    <string name="registration_password_hint">Password</string>
+    <string name="registration_btn_label">Create Account</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_btn_label">Login</string>
+    <string name="btn_register_acct_label">Register</string>
+    <string name="hacku_login_header_text">HackU Login</string>
+    <string name="hacku_registration_header_text">HackU Registration</string>
 </resources>
