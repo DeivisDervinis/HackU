@@ -8,6 +8,7 @@
                 android:centerColor="#4e5e9d"
                 android:startColor="#223a57"
                 android:type="radial" />
+            <corners android:radius="10dp"/>
         </shape>
     </item>
 </selector>

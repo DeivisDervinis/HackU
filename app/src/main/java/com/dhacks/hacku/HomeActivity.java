@@ -67,12 +67,12 @@ public class HomeActivity extends AppCompatActivity {
                 //Do something on the left!
                 //You also have access to the original object.
                 //If you want to use it just cast it (String) dataObject
-                Toast.makeText(HomeActivity.this, "Left", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, "Interest Ignored", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                Toast.makeText(HomeActivity.this, "Right", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, "Added to Profile", Toast.LENGTH_SHORT).show();
             }
 
             @Override
