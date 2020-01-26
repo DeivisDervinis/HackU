@@ -51,6 +51,8 @@ public class HomeActivity extends AppCompatActivity {
         al.add("Spontaneous");
         al.add("Agreeable");
         al.add("Team Player");
+        al.add("Avid JavaScript User");
+        al.add("Mentor");
 
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al );
         SwipeFlingAdapterView flingContainer = findViewById(R.id.frame);
@@ -88,15 +90,6 @@ public class HomeActivity extends AppCompatActivity {
 //                View view = flingContainer.getSelectedView();
 //                view.findViewById(R.id.item_swipe_right_indicator).setAlpha(scrollProgressPercent < 0 ? -scrollProgressPercent : 0);
 //                view.findViewById(R.id.item_swipe_left_indicator).setAlpha(scrollProgressPercent > 0 ? scrollProgressPercent : 0);
-            }
-        });
-
-
-        // Optionally add an OnItemClickListener
-        flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClicked(int itemPosition, Object dataObject) {
-                Toast.makeText(HomeActivity.this, "Click", Toast.LENGTH_SHORT).show();
             }
         });
 
