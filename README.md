@@ -1,7 +1,7 @@
 # HackU
 
 ## Screenshots
-![Image of HackU Assistant](https://i.imgur.com/2FOmVwd.jpg)
+![Image of HackU Assistant](https://i.imgur.com/SNDg0kj.png)
 
 ![Image of Interest Profile](https://i.imgur.com/hz5UpZ5.png)
 
