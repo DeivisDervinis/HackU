@@ -1,4 +1,10 @@
 # HackU
+
+## Screenshots
+![Image of HackU Assistant](https://i.imgur.com/2FOmVwd.jpg)
+
+![Image of Interest Profile](https://i.imgur.com/hz5UpZ5.png)
+
 ## Inspiration
 Based off of our own hackathon experiences and those of our friends, we know that the most chaotic portion of almost every hackathon is team formation - everyone scrambles to find other individuals with skills that compliment theirs & make a strong team. But this is often facilitated via Facebook Groups/Pages or Slack channels that contain hundreds of members, which can be messy and overwhelming for new hackers.
 
